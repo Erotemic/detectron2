@@ -135,6 +135,7 @@ def _apply_exif_orientation(image):
     Returns:
         (PIL.Image): the PIL image with exif orientation applied, if applicable
     """
+    return image
     if not hasattr(image, "getexif"):
         return image
 
