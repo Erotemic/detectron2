@@ -69,6 +69,8 @@ def load_coco_json(json_file, image_root, dataset_name=None, extra_annotation_ke
     from pycocotools.coco import COCO
 
     timer = Timer()
+    import xdev
+    xdev.embed()
     json_file = PathManager.get_local_path(json_file)
     with contextlib.redirect_stdout(io.StringIO()):
         coco_api = COCO(json_file)
